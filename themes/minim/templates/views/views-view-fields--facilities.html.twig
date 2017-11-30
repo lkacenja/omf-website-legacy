@@ -1,0 +1,19 @@
+<div class="center-block clearfix">
+  {% if fields.field_facility_image.content %}
+    <div class="float-right padding-xxs bg-white">
+      {{ fields.field_facility_image.content }}
+    </div>
+  {% endif %}
+
+  <div class="content padding-xs">
+    <div>
+      <div class="red text-xl">{{fields.title.content}}</div>
+      {% if fields.body.content %}
+        <p>{{fields.body.content}}</p>
+      {% endif %}
+      <div class="bg-red float-left">
+        <a href="{{ fields.path.content }}" class="text-xs padding-xs block-link">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>

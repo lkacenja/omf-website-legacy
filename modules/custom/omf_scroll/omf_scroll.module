@@ -1,0 +1,48 @@
+<?php
+
+function omf_scroll_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  /**
+  $path_info = Drupal::request()->getPathInfo();
+  switch ($path_info) {
+    case '/services':
+    case '/education':
+    case '/tools':
+    case '/':
+    case '/home':
+      $suggestions[] = 'page__scroll';
+      break;
+  }**/
+}
+
+
+function omf_scroll_trim_text($alter, $value) {
+  if (drupal_strlen($value) > $alter['max_length']) {
+    $value = drupal_substr($value, 0, $alter['max_length']);
+    if (!empty($alter['word_boundary'])) {
+      $regex = "(.*)\b.+";
+      if (function_exists('mb_ereg')) {
+        mb_regex_encoding('UTF-8');
+        $found = mb_ereg($regex, $value, $matches);
+      }
+      else {
+        $found = preg_match("/$regex/us", $value, $matches);
+      }
+      if ($found) {
+        $value = $matches[1];
+      }
+    }
+    // Remove scraps of HTML entities from the end of a strings
+    $value = rtrim(preg_replace('/(?:<(?!.+>)|&(?!.+;)).*$/us', '', $value));
+
+    if (!empty($alter['ellipsis'])) {
+      // @todo: What about changing this to a real ellipsis?
+      $value .= t('...');
+    }
+  }
+  if (!empty($alter['html'])) {
+    $value = Html::normalize($value);
+  }
+
+  return $value;
+}
+

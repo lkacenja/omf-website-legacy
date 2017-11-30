@@ -1,0 +1,20 @@
+<div class="center-block"> 
+  <div class="float-left margin-m width-l">
+    <div class="padding-xxs"><span class="bold uppercase">{{ contact.label }}</span></div>
+    <div class="padding-xxs"><span class="bold">Phone </span>{{ contact.phone }}</div>
+    <div class="padding-xxs"><span class="bold">Fax </span>{{ contact.fax }}</div>
+    <div class="padding-xxs">{{ contact.contact_link }}</div>
+    <div class="padding-xxs">{{ contact.address }}</div>
+  </div>
+  <div class="float-left margin-m width-l">
+    <div class="padding-xxs"><span class="bold uppercase">{{ connect.label }}</span></div>
+    <div class="float-left padding-xxs connect-icon"><a href="{{ connect.twitter_url }}"><img src="{{ connect.twitter_icon }}" /></a></div>
+    <div class="float-left padding-xxs connect-icon"><a href="{{ connect.fb_url }}"><img src="{{ connect.fb_icon }}" /></a></div>
+    <div class="float-left padding-xxs connect-icon"><a href="{{ connect.youtube_url }}"><img src="{{ connect.youtube_icon }}" /></a></div>
+    <div class="padding-xxs clear">{{ connect.newsletter_label }}</div>
+    <div class="padding-xxs">{{ connect.newsletter_form }}</div>
+  </div>
+  <div class="float-left margin-m width-l">
+    <div class="padding-xxs text-xs">{{ other.disclaimer }}</div>
+  </div>
+</div>

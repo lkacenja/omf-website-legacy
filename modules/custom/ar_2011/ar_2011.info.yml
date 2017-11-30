@@ -1,0 +1,5 @@
+type: module
+name: 2011 Annual Report 
+description: Provides the 2011 Annual Report single page and theme. 
+core: 8.x
+package: Custom

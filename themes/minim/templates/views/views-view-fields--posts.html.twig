@@ -1,0 +1,13 @@
+<div class="post-wrap">
+  <div class="post-image">
+    {{fields.field_post_image.content}}
+  </div>
+  <div class="content padding-xs">
+    <div>
+      <h3 class="red">{{fields.title.content}}</h3>
+      {% if fields.body.content %}
+        {{fields.body.content|raw}}
+      {% endif %}
+    </div>
+  </div>
+</div>

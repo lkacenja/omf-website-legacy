@@ -1,0 +1,5 @@
+type: module
+name: OMF Admin Menu 
+description: Adjustments for toolbar administrative menu 
+core: 8.x
+package: Custom

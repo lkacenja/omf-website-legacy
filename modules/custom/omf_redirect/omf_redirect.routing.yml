@@ -1,0 +1,6 @@
+auction_redirect:
+  path: '/auction-ebay'
+  defaults:
+    _content: 'Drupal\omf_redirect\Controller\OMFRedirect::auctionPage'
+  requirements:
+    _permission: 'access content'

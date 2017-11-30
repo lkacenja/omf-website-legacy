@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * Theme includes
+ */
+$theme_path = drupal_get_path('theme', 'minim');
+require_once($theme_path . '/processors/base.inc');
+
+//optional
+require_once($theme_path . '/processors/views.inc');
+require_once($theme_path . '/processors/blocks.inc');
+require_once($theme_path . '/processors/components.inc');
+require_once($theme_path . '/processors/fields.inc');
+require_once($theme_path . '/processors/node.inc');
+
+function minim_theme($existing, $type, $theme, $path) {
+  return array(
+    'omf_division_links' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_division_links',
+      'variables' => array('links' => array()),
+    ),
+    'omf_mission_media' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_mission_media',
+      'variables' => array('tag_line' => '', 'mission' => '', 'services' => array(), 'education' => array(), 'tools' => array()),
+    ),
+    'omf_tools_webtv' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_tools_webtv',
+      'variables' => array('title' => '', 'dom' => array(), 'cochannel' => array(), 'omp' => array()),
+    ),
+    'omf_logo' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_logo',
+      'variables' => array('image_url' => '', 'front_url' => ''),
+    ),
+    'omf_class_categories' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_class_categories',
+      'variables' => array('categories' => array()),
+    ),
+    'omf_footer' => array (
+      'path' => $path . '/templates/components',
+      'template' => 'omf_footer',
+      'variables' => array('contact' => array(), 'connect' => array(), 'other' => array()),
+    ),
+    'omf_class_meta' => array(
+      'path' => $path . '/templates/components',
+      'template' => 'omf_class_meta',
+      'variables' => array('classes' => array()),
+    ),
+    'omf_class' => array(
+      'path' => $path . '/templates/components',
+      'template' => 'omf_class',
+      'variables' => array('class' => array()),
+    ),
+  );
+}
+
+function minim_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  //dsm($variables['theme_hook_original']);
+  if ($variables['theme_hook_original'] == 'menu_tree__main') {
+    $suggestions[] = 'omf_division_links';
+  }
+}
+
+function minim_css_alter(&$css) {
+  unset($css['system.theme.css']);
+}
+
+/**
+ * Takes a google live form url and pulls out just the form element
+ * so that we can embed it on pages throughout the site while
+ * preserving formatting.
+ */
+function minim_google_form_url_output($url) {
+  $output = '';
+  $html = file_get_contents($url);
+
+  //check for a description on the form
+  preg_match("'<div class=\"ss-form-desc[^>]*>(.*?)</div>'si", $html, $match);
+  if ($match) {
+    $output .= $match[1];
+  }
+
+  $form_start = strpos($html, '<form');
+  $form_end = strpos($html, '</form>') + 7;
+  $length = $form_end - $form_start;
+  $form = substr($html, $form_start, $length);
+
+  /** replace span submit with button **/
+  $form = str_replace('<span class="quantumWizButtonPaperbuttonLabel exportLabel">Submit</span>', '<button type="submit">Submit</button>', $form);
+
+  if (!empty($form)) {
+    $output .= $form;
+  }
+
+  return $output;
+}

@@ -1,0 +1,40 @@
+{#
+<div class="clearfix class-meta">
+  {% for class in classes %}
+    <div class="float-left width-l height-temp margin-m fit-image">
+      <a href="{{ class.url }}" class="height-s block-link"><img class="border-s" src="{{ class.thumbnail }}" /></a>
+      <a href="{{ class.url }}" class="block-link text-xl">{{ class.node_title }}</a>
+      <div>{{ class.description }}</div>
+    </div>
+  {% endfor %}
+</div>
+#}
+
+
+{# jiang #}
+<div class="clearfix class-meta">
+  {% for class in classes %}
+    <div class="float-left width-l height-temp margin-m fit-image flip-flop news-item clearfix">
+      <div class="out">
+        <div class="image">
+          <a href="{{ class.url }}" class="height-s block-link"><img class="border-s" src="{{ class.thumbnail }}" /></a>
+        </div>
+        <div class="caption">
+          <a href="{{ class.url }}" class="block-link text-xl">{{ class.node_title }}</a>
+          <div>{{ class.description }}</div>
+        </div>
+      </div><!--endout -->
+      <div class="over">
+        <a href="{{ class.url }}">
+          <div class="border"></div>
+        </a>
+        <div class="caption">
+          <a href="{{ class.url }}" class="block-link text-xl">{{ class.node_title }}</a>
+          <a href="{{ class.url }}" class="text-decoration-none"> <div>{{ class.description }}</div></a>
+        </div>
+        <a href="{{ class.url }}" class="height-s block-link"><img class="border-s" src="{{ class.thumbnail }}" /></a> 
+      </div>
+    </div><!--endcss -->
+  {% endfor %}
+</div>
+

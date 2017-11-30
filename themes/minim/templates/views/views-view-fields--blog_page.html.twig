@@ -1,0 +1,22 @@
+<div class="center-block clearfix">
+  {% if fields.field_post_image.content %}
+    <div class="float-right padding-xxs bg-white fit-image">
+      {{ fields.field_post_image.content }}
+    </div>
+  {% endif %}
+
+  <div class="content padding-xs">
+      {% if fields.field_post_tag.content %}
+        {{fields.field_post_tag.content}}
+      {% endif %}
+    <div>
+      <div class="red text-xl">{{fields.title.content}}</div>
+      {% if fields.body.content %}
+        <p>{{fields.body.content}}</p>
+      {% endif %}
+      <div class="bg-red float-left">
+        {{ fields.view_node.content }}
+      </div>
+    </div>
+  </div>
+</div>

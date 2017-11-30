@@ -1,0 +1,12 @@
+/**
+ * Place large structural css markup here.
+ */
+
+img {
+  display: block;
+}
+
+.content-top {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}

@@ -1,0 +1,31 @@
+<article class="{{ attributes.class}} clearfix"{{ attributes }} role="article">
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ node_url }}">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <div class="meta submitted">
+        {{ user_picture }}
+        {{ submitted }}
+      </div>
+    {% endif %}
+  </header>
+  <div class="content clearfix"{{ content_attributes }}>
+    {% if content.google_form %}
+      {{ content.google_form }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+    <div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div>
+  </div>
+  {% if content.links %}
+    <footer class="link-wrapper">
+      {{ content.links }}
+    </footer>
+  {% endif %}
+  {{ content.comments }}
+</article>

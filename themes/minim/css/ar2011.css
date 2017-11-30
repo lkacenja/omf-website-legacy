@@ -1,0 +1,303 @@
+body {
+  font-family: Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+  letter-spacing: .01em;
+  margin: 0;
+  padding: 0;
+
+  /* Use a 13px base font size with a 18px line height */
+  font-size: 0.8125em; /* 16px x .8125 = 13px */
+  line-height: 1.384em; /* 13px x 1.384 = 18px */
+
+  /* Use a 14px base font size with a 18px line height */
+  font-size: 0.875em; /* 16px x .875 = 14px */
+  line-height: 1.286em; /* 14px x 1.286 = 18px */
+
+}
+
+h1, h2, h3 {
+  margin: 1.6em 0 0 0;
+}
+h4, h5, h6 {
+  margin: 0;
+}
+h4 {
+  margin-bottom: 1em;
+}
+h2.history {
+  font-size: 2em;
+}
+
+a {
+  color: #2058a1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.mission a {
+  color: #7bb8ee;
+}
+
+ul.noliststyle {
+  padding: 0;
+}
+
+ul.noliststyle li {
+  list-style: none;
+}
+
+.outer {
+}
+
+.inner,
+.sub {
+  margin: 0 auto;
+  width: 960px;
+}
+.hide {
+  text-indent: -666em;
+  line-height: 0;
+  margin: 0;
+}
+
+/** Sections - outer **/
+.banner {
+  background: transparent url(../img/ar2011/bg-repeat-banner.png) scroll repeat-x center top;
+}
+.letter {
+  background: #e6e4d7 url(../img/ar2011/bg-repeat-double-scroll.png) scroll repeat-x center top;
+  border-top: 6px solid #999;
+}
+.mission {
+  background: #5a3c3e url(../img/ar2011/bg-repeat-mission.png) scroll repeat-x center top;
+}
+.popserved,
+.highlights {
+  background: #fff url(../img/ar2011/bg-repeat-popserved.png) scroll repeat-x center top;
+}
+.services,
+.services-2,
+.education,
+.education-2,
+.tools,
+.tools-2 {
+  background: #fff url(../img/ar2011/bg-repeat-sub.png) scroll repeat-x center top;
+}
+.idonors {
+  background: #c3c151 url(../img/ar2011/bg-repeat-idonors.png) scroll repeat-x center top;
+}
+.cdonors {
+  background: #e6e4d7 url(../img/ar2011/bg-repeat-double-scroll.png) scroll repeat-x center top;
+  border-top: 1px solid #000;
+}
+.volunteers {
+  background: #e47326 url(../img/ar2011/bg-repeat-volunteers.png) scroll repeat-x right top;
+}
+.financials {
+  background: #c3c151 url(../img/ar2011/bg-green-header.png) scroll repeat-x center top;
+}
+
+/** Sections - inner **/
+.inner {
+  position: relative;
+}
+.banner .inner {
+  background: transparent url(../img/ar2011/hdr-banner.png) scroll no-repeat right top;
+  height: 383px;
+}
+.letter .inner {
+  background: transparent url(../img/ar2011/hdr-letter.png) scroll no-repeat left top;
+  padding: 82px 5px 65px 0;
+}
+.mission .inner {
+  background: transparent url(../img/ar2011/hdr-mission.png) scroll no-repeat center top;
+  padding: 200px 5px 45px 14px;
+}
+.popserved .inner {
+  background: transparent url(../img/ar2011/hdr-popserved.png) scroll no-repeat left top;
+  padding: 102px 5px 65px 14px;
+}
+.services .inner {
+  background: transparent url(../img/ar2011/hdr-services.png) scroll no-repeat left top;
+  padding: 75px 5px 65px 14px;
+}
+.education .inner {
+  background: transparent url(../img/ar2011/hdr-education.png) scroll no-repeat left top;
+  height: 722px;
+}
+.tools .inner {
+  background: transparent url(../img/ar2011/hdr-tools.png) scroll no-repeat left top;
+  padding: 85px 5px 65px 14px;
+  min-height: 330px;
+}
+.idonors .inner {
+  background: transparent url(../img/ar2011/hdr-idonors.png) scroll no-repeat right top;
+  padding: 250px 5px 45px 14px;
+}
+.cdonors .inner {
+  background: transparent url(../img/ar2011/hdr-cdonors.png) scroll no-repeat left top;
+  padding: 198px 5px 50px 14px;
+}
+.volunteers .inner {
+  background: transparent url(../img/ar2011/hdr-volunteers.png) scroll no-repeat right top;
+  padding: 224px 5px 50px 14px;
+}
+.highlights .inner {
+  background: transparent url(../img/ar2011/hdr-highlights.png) scroll no-repeat left top;
+  padding: 133px 5px 50px 14px;
+}
+.services-2 .inner {
+  background: transparent url(../img/ar2011/hdr-services.png) scroll no-repeat left top;
+  padding: 75px 5px 65px 14px;
+}
+.education-2 .inner {
+  background: transparent url(../img/ar2011/hdr-education-2.png) scroll no-repeat left top;
+  padding: 50px 60px 60px 14px;
+}
+.tools-2 .inner {
+  background: transparent url(../img/ar2011/hdr-tools-2.png) scroll no-repeat left top;
+  padding: 55px 5px 65px 14px;
+}
+.financials .inner {
+  background: transparent url(../img/ar2011/hdr-financials.png) scroll no-repeat center top;
+  height: 1410px;
+}
+
+
+
+
+/** Section - Banner **/
+.banner .inner {
+  overflow: visible;
+}
+.banner h1 {
+  display: block;
+  width: 1018px;
+  overflow: visible;
+}
+
+/** Section - Letter from ED **/
+.letter div.content {
+  margin-left: 331px;
+}
+
+/** Section - Mission **/
+.mission {
+  color: #fff;
+}
+.mission h3 {
+  font-family: Georgia, "Times New Roman", "Bitstream Vera Serif", serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+
+/** Section - Population Served **/
+.popserved {
+}
+
+.popserved iframe {
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+
+ul.video-clients {
+  width: 320px;
+}
+
+.services iframe {
+  float: right;
+  margin-right: 30px;
+}
+
+/** Section - Education **/
+.education {
+}
+.education .city-map {
+  padding: 410px 347px 0 354px;
+  text-align: center
+}
+.city-map a.map-button {
+  background: transparent url(../img/ar2011/city_denver_button.png) scroll no-repeat left top;
+  display: block;
+  height: 217px;
+  width: 259px;
+}
+.city-map a.map-button:hover {
+  background: transparent url(../img/ar2011/city_denver_button.png) scroll no-repeat left bottom;
+}
+
+
+
+/** Section - Tools **/
+.tools h3 {
+  width: 300px;
+}
+.tools ul {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+#graph-tools {
+  left: 450px;
+  min-height: 302px;
+  min-width: 373px;
+  position: absolute;
+  top: 85px;
+}
+
+/** Section - Individual Donors **/
+.idonors {
+  color: #333;
+}
+
+/** Section - Corporate Donors **/
+.cdonors ul {
+  margin: 0;
+  padding: 0;
+}
+
+/** Section - Volunteers **/
+.volunteers {
+  color: #fff;
+}
+.volunteers ul {
+  margin: 0;
+  padding: 0;
+}
+
+/** Section - Highlights **/
+.highlights {
+}
+.bbottom {
+  border-bottom: 1px dashed #000;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/** Highlights Sub-Sections - Services-2, Education-2, Tools-2 **/
+.services-2 h3 {
+  margin: 0;
+}
+.services-2 table,
+.education-2 table,
+.tools-2 table {
+  margin: 30px 0 0 0;
+}
+.services-2 {
+}
+.education-2 {}
+.tools-2 {
+}
+
+
+
+img.shillouette,
+img.camera {
+  left: 0;
+  position: absolute;
+  top: 0;
+}

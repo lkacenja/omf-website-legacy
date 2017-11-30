@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Implements hook_toolbar().
+ */
+function omf_admin_menu_toolbar() {
+  $user = \Drupal::currentUser();
+
+  // Add logout & user account links or login link.
+  if ($user->isAuthenticated()) {
+    $links = array(
+      'content_tasks' => array(
+        'title' => t('Manage My Content'),
+        'href' => 'user/my-content',
+        'html' => TRUE,
+        'attributes' => array(
+          'title' => t('Manage my website content'),
+        ),
+      ),
+    );
+  }
+
+  $items['manage-content'] = array(
+    '#type' => 'toolbar_item',
+    'tab' => array(
+      '#type' => 'link',
+      '#title' => t('Open Media Foundation'),
+      '#href' => 'user/manage-content',
+      '#attributes' => array(
+        'title' => t('OMF Website Maintenance Dashboard'),
+        'class' => array('toolbar-icon', 'toolbar-icon-menu'),
+      ),
+    ),
+    'tray' => array(
+      '#heading' => t('OMF website account actions'),
+      'user_links' => array(
+        '#theme' => 'links__toolbar_user',
+        '#links' => $links,
+        '#attributes' => array(
+          'class' => array('menu'),
+        ),
+      ),
+    ),
+    '#weight' => 200,
+    '#attached' => array(
+      'library' => array(
+        'user/drupal.user.icons',
+      ),
+    ),
+  );
+
+  return $items;
+}

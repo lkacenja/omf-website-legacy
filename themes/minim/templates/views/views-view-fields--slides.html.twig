@@ -1,0 +1,17 @@
+<div class="slider-wrap">
+  <div class="slider-image">
+    {{fields.field_slide_image.content}}
+  </div>
+  {% if fields.field_slide_include_tab %}
+    <div class="overlay-box {{ colorclass }}">
+      <div class="overlay-content">
+        <div class="bold">{{fields.title.content}}</div>
+        <div class="body-content">
+          {% if fields.body.content %}
+            {{fields.body.content}}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>

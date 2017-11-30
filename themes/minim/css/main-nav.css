@@ -1,0 +1,123 @@
+#division-links { 
+  padding-left: 40px; 
+}
+
+#division-links .link-wrapper {
+  margin-top: 25px;
+}
+
+#division-links ul ul {
+  position: relative;
+  padding: 5px;
+  color: #fff;
+}
+
+#division-links .link-wrapper > ul {
+  position: absolute;
+  z-index: 99;
+  display: none;
+  width: 208px;
+  top: 120px;
+  left: 0;
+  border: 1px solid #E5E6E7;
+}
+
+#division-links ul ul li {
+  padding: 5px;
+  font-weight: bold;
+}
+#division-links ul ul ul li {
+  font-weight: normal;
+}
+
+#division-links ul ul a:hover {
+  text-decoration: none;
+  color: #C43B28;
+}
+.division-link-box { 
+  margin: 15px 20px 10px 60px; 
+}
+
+/**bottom of block border to match color**/
+.area-56,
+.area-57,
+.area-58,
+.area-general {
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+}
+.area-56 { 
+  border-color: #009286; 
+}
+.area-57 { 
+  border-color: #C43B28; 
+}
+.area-58 { 
+  border-color: #E4702A; 
+}
+.area-general {
+  border-color: #3F3F40;
+}
+
+ul li.bg-green ul,
+ul li.bg-red ul,
+ul li.bg-orange ul {
+  background-color: #EEEEEE;
+}
+
+#division-links ul li ul {
+  color: #000;
+}
+
+/**services**/
+.division-link-56 .big-underline { 
+  border-color: #009286; 
+}
+.division-link-56 ul { 
+  background-color: #009286; 
+}
+.division-link-56 {
+  border-left: 1px solid #E5E6E7;
+  border-right: 1px solid #E5E6E7;
+}
+
+
+/**education**/
+.division-link-57 .big-underline { 
+  border-color: #C43B28; 
+}
+.division-link-57 ul { 
+  background-color: #C43B28; 
+}
+
+/**tools**/
+.division-link-58 .big-underline { 
+  border-color: #E4702A; 
+}
+.division-link-58 ul { 
+  background-color: #E4702A; 
+}
+.division-link-58 {
+  border-left: 1px solid #E5E6E7;
+  border-right: 1px solid #E5E6E7;
+}
+
+.bg-green .big-underline,
+.bg-red .big-underline,
+.bg-orange .big-underline { 
+  border-color: #fff; 
+}
+
+/**
+ * Mobile menu trigger 
+ */
+.mmenu-trigger {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 40px;
+  height: 37px;
+  background: transparent url('../img/omf-mmenu-trigger.png') top left no-repeat;
+  text-indent: -999em;
+}

@@ -1,0 +1,292 @@
+/**
+ * This is where reuseable css components go.
+ */
+
+/** LAYOUT **/
+.block-link { display: block; }
+.float-left { float: left; }
+.float-right { float: right; }
+.clear { clear: both; }
+.relative { position: relative; }
+.align-center { text-align: center; }
+.strip-margin { margin: 0; }
+.strip-padding { padding: 0; }
+.absolute { position: absolute; }
+
+/* can be used inside of 100% width elements to center
+the inner elements */
+.center-block {
+  max-width: 980px;
+  width: 100%;
+  margin: auto;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.relative-center {
+  position: relative;
+  top: 0;
+  margin: 0 auto 0 auto;
+}
+
+.fit-image img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* inline is an improved inline-block with support
+for more browsers, if it is nested inside of a div with
+inline-outer it will be centered horizontally */
+.inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* inline elements can be vertically aligned by
+putting .valign on them assuming they are inside a inline-inner 
+this may require adding display: table-cell at some point*/
+.valign { 
+  vertical-align: middle; 
+  display: table-cell;
+}
+/** END LAYOUT **/
+
+
+/** BUTTONS & NAV **/
+.horizontal-nav ul {
+  padding: 0;
+  margin: 0;
+}
+.horizontal-nav ul li {
+  display: block;
+  list-style-type: none;
+  list-style-image: none;
+  float: left;
+}
+
+.big-underline {
+  border-bottom: 6px solid #000; 
+  margin-bottom: 10px;
+}
+.big-underline a:hover {
+  text-decoration: none;
+}
+
+.round-corners {
+  border-radius: 3px;
+}
+
+/** END BUTTONS & NAV **/
+
+/** MISC **/
+/* for adding line em-esque dashes on right and left
+of headers or titles */
+.dash-left {
+  margin-right: 10px;
+  width: 80px;
+  line-height: 2px;
+}
+.dash-right {
+  margin-left: 10px;
+  width: 80px;
+  line-height: 2px;
+}
+/** END MISC **/
+
+/** VIDEO **/
+.fit-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.fit-youtube iframe,
+.fit-youtube object,
+.fit-youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/** END VIDEO **/
+
+/** TEXT **/
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 300;
+}
+.bold {
+  font-weight: 700;
+}
+
+.text-xxs {
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+.text-xxs-sans {
+  font-size: 12px;
+}
+.text-xs {
+  font-size: 14px;
+}
+.text-s {
+  font-size: 14px;
+}
+.text-m { 
+  font-size: 18px;
+}
+.text-l { 
+  font-size: 24px;
+  font-family: "proxima-nova-alt-condensed",sans-serif;
+}
+.text-xl {
+  font-size: 28px;
+  font-family: "proxima-nova-alt-condensed",sans-serif;
+}
+.text-xxl {
+  font-size: 28px;
+}
+.text-xxxl {
+  font-size: 45px;
+  font-family: "proxima-nova", sans-serif;
+}
+/** END TEXT **/
+
+/** PADDING **/
+.padding-xxs { padding: 5px; }
+.padding-xs { padding: 10px; }
+.padding-s { padding: 15px; }
+.padding-m { padding: 20px; }
+.padding-l { padding: 25px; }
+.padding-xl { padding: 30px; }
+.padding-xxl { padding: 35px; }
+
+.padding-m-vert { padding: 20px 0; }
+.padding-l-vert { padding: 25px 0; }
+
+.padding-xl-top { padding-top: 30px; }
+/** END PADDING **/
+
+/** MARGIN **/
+.margin-s { margin: 5px; }
+.margin-m { margin: 10px; }
+.margin-l { margin: 15px; }
+.margin-xl { margin: 20px; }
+.margin-xxl { margin: 25px; }
+/** END MARGIN **/
+
+/** WIDTH **/
+.width-xxs { width: 100px; }
+.width-xs { width: 150px; }
+.width-s { width: 200px; }
+.width-m { width: 250px; }
+.width-l { width: 298px; }
+.width-xl { width: 400px; }
+.width-xxl { width: 500px; }
+.width-half { width: 48%; }
+.width-third { width: 32%; }
+/** END WIDTH **/
+
+/** HEIGHT **/
+.height-xxs { height: 100px; }
+.height-xs { height: 150px; }
+.height-s { height: 200px; }
+.height-m { height: 250px; }
+.height-l { height: 300px; }
+.height-xl { height: 350px; }
+.height-xxl { height: 550px; }
+.height-temp { height: 450px; }
+/** END HEIGHT **/
+
+
+/** BORDERS **/
+.border-bottom-grey { border-bottom: 1px solid #3F3F40; }
+.border-bottom-lgrey { border-bottom: 1px solid #EEEEEE; }
+.border-s { border: 1px solid #DDDDDD; }
+/** END BORDERS **/
+
+/** COLORS **/
+.bg-green {
+  background-color: #009488;
+  color: #fff;
+}
+.green { color: #009488; }
+
+.bg-orange {
+  background-color: #E37035;
+  color: #fff;
+}
+.orange { color: #E37035; }
+
+.bg-red {
+  background-color: #C43B28;
+  color: #fff;
+}
+.red { color: #C43B28; }
+
+.bg-black {
+  background-color: #000;
+  color: #fff;
+}
+.black { color: #000; }
+
+.bg-white {
+  background-color: #fff;
+  color: #000;
+}
+.white { color: #fff; }
+
+.bg-grey {
+  background-color: #3F3F40;
+  color: #fff;
+}
+.grey { color: #3F3F40; }
+
+.bg-light-grey {
+  background-color: #EEEEEE;
+  color: #000;
+}
+.light-grey { color: #EEEEEE; }
+
+.grey { color: #3F3F40; }
+
+.bg-textured {
+  background-image: url('/themes/minim/img/line-texture.png');
+}
+.bg-textured-light {
+  background-image: url('/themes/minim/img/line-texture-light.png');
+}
+.bg-blue {
+  background-color:#428bca;
+}
+/** END COLORS **/
+
+/** form **/
+.google-form .ss-q-title {
+  float: left;
+  font-weight: bold;
+  width: 200px;
+  border: 1px solid red;
+}
+.google-form .ss-secondary-text {
+  display: none;
+}
+.google-form input {
+  float: left;
+  width: 300px;
+  border: 1px solid blue;
+}
+/** end form **/

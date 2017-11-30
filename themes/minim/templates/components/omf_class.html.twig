@@ -1,0 +1,30 @@
+<img src="{{ class.image }}" class="omf-class-image float-right padding-xxl" />
+<div class="text-xxxl bold">{{ class.title }}</div>
+<div>{{ class.description }}</div>
+{% if class.member_price %}
+  <div><span class="bold">Member Price:</span> {{ class.member_price }}</div>
+{% endif %}
+{% if class.price %}
+  <div><span class="bold">Non-Member Price:</span> {{ class.price }}</div>
+{% endif %}
+<br />
+<div class="bold">Dates: </div>
+{% if class.human_dates %}
+  {% for product in class.human_dates %}
+    <table>
+      <tr>
+        <td>{{ class.title }}</td>
+        <td class="padding-xs"><div class="bg-green"><a href="https://www.denveropenmedia.org/{{ product[0].path }}" class="block-link padding-xs">Register at Denver Open Media</a></div></td>
+      <tr>
+      {% for date in product %}
+        <tr>
+          <td>{{ date.date }} {{ date.time }}</td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endfor %}
+{% else %}
+  <p>No upcoming dates available, please email johna@openmediafoundation.org if you are interested in taking this class.</p>
+{% endif %}
+</table>

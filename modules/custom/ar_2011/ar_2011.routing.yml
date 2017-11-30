@@ -1,0 +1,6 @@
+ar_2011:
+  path: '/2011-annual-report'
+  defaults:
+    _content: 'Drupal\ar_2011\Controller\ar2011::render'
+  requirements:
+    _permission: 'access content'

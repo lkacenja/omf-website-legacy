@@ -1,0 +1,27 @@
+{# <div class="text-xxl bold uppercase margin-s">{{ tag_line }}</div> #}
+<div class="text-xl">{{ mission }}</div>
+<div class="padding-s"></div>
+<div class="float-left width-l margin-s height-xl">
+  <a href="{{ services.link }}"><img src="{{ services.image_path }}" class="inline" /></a>
+  <div class="text-l bold uppercase margin-s green">{{ services.label }}</div>
+  <div class="margin-l">{{ services.desc }}</div>
+  <div class="bg-red round-corners inline">
+    <a href="{{ services.link }}" class="padding-xs block-link">{{ services.button_text }}</a> 
+  </div>
+</div>
+<div class="float-left width-l margin-s height-xl">
+  <a href="{{ education.link }}"><img src="{{ education.image_path }}" class ="inline" /></a>
+  <div class="text-l bold uppercase margin-s red">{{ education.label }}</div>
+  <div class="margin-l">{{ education.desc }}</div>
+  <div class="bg-red round-corners inline">
+    <a href="{{ education.link }}" class="padding-xs block-link">{{ education.button_text }}</a> 
+  </div>
+</div>
+<div class="float-left width-l margin-s height-xl">
+  <a href="{{ tools.link }}"><img src="{{ tools.image_path }}" class="inline" /></a>
+  <div class="text-l bold uppercase margin-s orange">{{ tools.label }}</div>
+  <div class="margin-l">{{ tools.desc }}</div>
+  <div class="bg-red rounder-corners inline">
+    <a href="{{ tools.link }}" class="padding-xs block-link">{{ tools.button_text }}</a> 
+  </div>
+</div>

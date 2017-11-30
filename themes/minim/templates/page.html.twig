@@ -1,0 +1,50 @@
+<div class="site-container">
+  {% include '/themes/minim/templates/header.html.twig' with {logo: logo, header: page.header, front_page: front_page} %}
+  {{ messages }}
+
+  {% if page.content_top %}
+    {{ messages }}
+    <div class="region-content-top">
+      {{ page.content_top }}
+    </div>
+  {% endif %}
+
+  {% if not page.no_body and page.content %}
+    <div class="region-content center-block padding-xl-top">
+      {{ title_prefix }}
+      {% if title and not is_front %}
+        <div class="text-xxxl bold padding-xs">{{ title }}</div>
+      {% endif %}
+      {{ title_suffix }}
+      {% if tabs %}
+        <div class="horizontal-nav white padding-xxs">
+          {{ tabs }}
+        </div>
+      {% endif %}
+      {% if action_links %}
+        <nav class="action-links">{{ action_links }}</nav>
+      {% endif %}
+      {% if page.content %}
+        <div class="clear padding-xs">
+          {{ page.content }}
+        </div>
+      {% endif %}
+    </div>
+  {% elseif tabs and page.content %}
+    <div class="region-content center-block padding-xl clearfix">
+      <div class="horizontal-nav white padding-xxs">
+        {{ tabs }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.content_bottom %}
+    <div class="region-content-bottom">
+      {{ page.content_bottom }}
+    </div>
+  {% endif %}
+  
+  {% if page.footer %}
+    {% include '/themes/minim/templates/footer.html.twig' with {footer: page.footer} %}
+  {% endif %}
+</div>

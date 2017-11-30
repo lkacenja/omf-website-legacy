@@ -1,0 +1,16 @@
+<div{{ attributes }}>
+  <div{{ content_attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <div class="inline-outer">
+        <div class="align-center text-xxl bold uppercase block-title">
+          {{ label }}
+        </div>
+      </div>
+    {% endif %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>
+

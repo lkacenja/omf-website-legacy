@@ -1,0 +1,42 @@
+services_scroll:
+  path: '/services'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+education_scroll:
+  path: '/education'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+education_scroll:
+  path: '/education/class-types'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+class_categories:
+  path: '/education/class-types/{category_id}/{category_name}'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::classCategoryPage'
+  requirements:
+    _permission: 'access content'
+class:
+  path: '/education/classes/{class_id}/{class_name}'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::classPage'
+  requirements:
+    _permission: 'access content'
+tools_scroll:
+  path: '/tools'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+landing_scroll:
+  path: '/home'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'

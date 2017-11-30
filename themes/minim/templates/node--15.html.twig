@@ -1,0 +1,35 @@
+<article class="{{ attributes.class}} clearfix"{{ attributes }} role="article">
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ node_url }}">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <div class="meta submitted">
+        {{ user_picture }}
+        {{ submitted }}
+      </div>
+    {% endif %}
+  </header>
+  <div class="content clearfix"{{ content_attributes }}>
+    <div class="media">
+      <div class="embedded-video">
+        <iframe src="https://player.vimeo.com/video/238949569?autoplay=1&byline=0" width="1440" height="810" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/238949569">OMF Production Reel 2017</a> from <a href="https://vimeo.com/openmediafoundation">Open Media Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+      </div>
+      <div class="node-15-body">
+        <div class="node-15-body-title">Video Production</div>
+        {{ content.body }}
+      </div>
+    </div>
+  </div>
+  {% if content.links %}
+    <footer class="link-wrapper">
+      {{ content.links }}
+    </footer>
+  {% endif %}
+  {{ content.comments }}
+</article>

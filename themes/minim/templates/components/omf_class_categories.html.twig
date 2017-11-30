@@ -1,0 +1,41 @@
+{# jiang #}
+<p><b>$500 Film School!</b> Get unlimited access for most classes at Open Media Foundation for an entire year. <a class="red" target="_blank" style="color: #C43B28;" href="https://www.denveropenmedia.org/500-film-school">Click here for more information.</a></p>
+{% for category in category_info %}
+  <div class="float-left width-l height-temp margin-m fit-image flip-flop news-item clearfix">
+    <div class="out">
+      <div class="image">
+        <a href="{{ category.link }}" class="height-s block-link"><img class="border-s" src="{{ category.thumbnail }}" /></a>
+      </div>
+      <div class="caption">
+        <a href="{{ category.link }}" class="block-link text-xl">{{ category.title }}</a>
+        <div>{{ category.description }}</div>
+      </div>
+    </div>
+    <div class="over">
+      <a href="{{ category.link }}">
+        <div class="border"></div>
+      </a>
+      <div class="caption">
+        <a href="{{ category.link }}" class="block-link text-xl">{{ category.title }}</a>
+        <a href="{{ category.link }}" class="text-decoration-none"><div>{{ category.description }}</div></a>
+      </div>    
+      <a href="{{ category.link }}" class="height-s block-link"><img class="border-s" src="{{ category.thumbnail }}" /></a>
+    </div>
+  </div>
+{% endfor %}
+
+
+{# original #}
+{#
+Take unlimited classes and have access to professional equipment for an entire year through Denver Open Media's Equipment & Training membership.
+Good through 2015.
+<a class="red" target="_blank" style="color: #C43B28;" href="https://www.denveropenmedia.org/membership">Click here for more information.</a>
+</p>
+{% for category in category_info %}
+  <div class="float-left width-l height-temp margin-m fit-image">
+    <a href="{{ category.link }}" class="height-s block-link"><img class="border-s" src="{{ category.thumbnail }}" /></a>
+    <a href="{{ category.link }}" class="block-link text-xl">{{ category.title }}</a>
+    <div>{{ category.description }}</div>
+  </div>
+{% endfor %}
+#}

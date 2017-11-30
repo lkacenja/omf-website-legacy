@@ -1,0 +1,40 @@
+jquery.cycle:
+  remote: http://www.malsup.com/jquery/cycle
+  version: 2.9999.81
+  js:
+    libraries/jquery-cycle/jquery.cycle.all.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+jquery.hoverIntent:
+  remote: http://cherne.net/brian/resources/jquery.hoverIntent.minified.js
+  version: r7
+  js:
+    libraries/jquery-hoverIntent/jquery.hoverIntent.minified.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+jquery.menu_drops:
+  remote: https://github.com/lkacenja/menu-drops 
+  version: 1 
+  js:
+    libraries/jquery-menu-drops/jquery.menu-drops.js: {}
+  dependencies:
+    - minim/jquery.hoverIntent
+jquery.mmenu:
+  remote: http://mmenu.frebsite.nl
+  version: 4.2.5
+  js:
+    libraries/jquery-mmenu/js/jquery.mmenu.min.all.js: {}
+  css:
+    theme:
+      libraries/jquery-mmenu/css/jquery.mmenu.all.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

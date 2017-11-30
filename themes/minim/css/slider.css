@@ -1,0 +1,50 @@
+.view-slides {
+  z-index: 0;
+  max-width: 1500px;
+  width: 100%;
+  /**margin: auto;**/
+  padding: 0;
+}
+
+#rotator-nav {
+  width: 60%;
+}
+
+#rotator-nav a:link,
+#rotator-nav a:visited {
+  display: block;
+  float: left;
+  width: 33%;
+  height: 10px;
+  text-indent: -999em;
+}
+
+#rotator-nav a:focus,
+#rotator-nav a:hover,
+#rotator-nav a.activeSlide {
+  opacity: 0.7;
+}
+
+#rotator-nav-wrap {
+  position: relative;
+  z-index: 50;
+}
+.overlay-box {
+  position: absolute;
+  width: 19.8%;
+  height: 100px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.overlay-content {
+  padding: 10px;
+}
+.views-row-1 .overlay-box { left: 20%; }
+.views-row-2 .overlay-box { left: 39.8%; }
+.views-row-3 .overlay-box { left: 59.6%; }
+
+@media only screen and (max-width:730px) {
+  .slider-wrap .body-content {
+    display: none;
+  }
+}

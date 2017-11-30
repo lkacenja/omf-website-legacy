@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    {{ page.head }}
+    <title>{{ head_title }}</title>
+    {{ page.styles }}
+    {{ page.scripts }}
+  </head>
+  <body{{ attributes }}>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLVCNS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page.content }}
+    {{ page_bottom }}
+    {{ page.scripts('footer') }}
+  </body>
+</html>

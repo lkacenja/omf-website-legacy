@@ -1,0 +1,36 @@
+<div class="relative">
+  <div class="text-xxxl bold padding-s">
+    {{ fields.title.content }}
+  </div>
+  <div class="portfolio-details">
+    {% if fields.field_portfolio_client.content %}
+      <div class="padding-s">
+        <div class="text-xl bold">
+          {{ fields.field_portfolio_client.label }}:
+        </div>
+        {{ fields.field_portfolio_client.content }}
+      </div>
+    {% endif %} 
+    {% if fields.field_portfolio_work_detail.content %}
+      <div class="padding-s">
+        <div class="text-xl bold">
+          {{ fields.field_portfolio_work_detail.label }}:
+        </div>
+        {{ fields.field_portfolio_work_detail.content }}
+      </div>
+    {% endif %} 
+  </div>
+  {% if fields.field_portfolio_image.content or fields.field_portfolio_video.content %}
+    {% if fields.field_portfolio_video.content %}
+      <div class="absolute portfolio-feature">
+        <div class="fit-youtube">
+          <iframe width="620" height="380" src="{{ fields.field_portfolio_video.content }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    {% else %}
+      <div class="absolute portfolio-feature fit-image">
+        {{ fields.field_portfolio_image.content }}
+      </div>
+    {% endif %}
+  {% endif %} 
+</div>

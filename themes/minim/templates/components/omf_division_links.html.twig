@@ -1,0 +1,32 @@
+  <div id="division-links" class="float-left">
+    <ul>
+    {% for menu_id,link in division_links %}
+      <li class="width-s padding-xs height-xxs relative float-left{{ link.class }}">
+        <div class="link-wrapper">
+          <div class="text-l bold uppercase big-underline inline">
+            {{ link.link }}
+          </div>
+          <div class="text-xxs italic">
+            {{ link.desc }}
+          </div>
+          {% if link.sub %}
+            <ul>
+              {% for sub_menu_id,sub_link in link.sub %}
+                <li class="text-xs">
+                  {{ sub_link.link }}
+                  {% if sub_link.tert %}
+                    <ul>
+                      {% for tert_menu_id, tert_link in sub_link.tert %}
+                        <li class="text-xs">{{ tert_link.link }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>

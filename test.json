@@ -1,0 +1,25 @@
+{
+  "providerName" : "PixL",
+  "language": "en-US",
+  "lastUpdated": "2015-11-11T22:21:37+00:00",
+  "shortFormVideos": [
+     {
+        "id": "PIXLIVESTATION115",
+        "title": "PixL Live TV",
+        "shortDescription": "PixL Live on Roku",
+        "thumbnail": "http://openmediafoundation.org/sites/default/files/pixlroku.jpg",
+        "releaseDate": "2016-11-03",
+        "content": {
+           "dateAdded": "2016-11-03T04:14:54.431Z",
+           "duration": 500,
+           "videos": [
+              {
+                 "url": "http://edge.pixl-tv-linear.top.comcast.net/out/u/pixl.m3u8",
+                 "quality": "HD",
+                 "videoType": "HLS"
+              }
+           ]
+        }
+     }
+  ]
+}

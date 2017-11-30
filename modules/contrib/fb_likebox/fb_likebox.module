@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for FB Likebox module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function fb_likebox_theme() {
+  return array(
+      'fb_likebox_block' => array(
+        'variables' => array(
+          'fb_url' => NULL,
+          'fb_colorscheme' => NULL,
+          'fb_header' => NULL,
+          'fb_stream' => NULL,
+          'fb_show_faces' => NULL,
+          'fb_force_wall' => NULL,
+          'fb_width' => NULL,
+          'fb_height' => NULL,
+          'fb_show_border' => NULL,
+        ),
+        'template' => 'fb_likebox_block'
+      ),
+  );
+}

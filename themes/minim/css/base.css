@@ -1,0 +1,58 @@
+/** global **/
+a:link,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.node a:link,
+.node a:visited,
+.node a:active {
+  color: #C43B28; 
+}
+
+body {
+  font-family: "proxima-nova",sans-serif;
+  font-size: 18px;
+  background: #FFFFFF;
+}
+
+.node h1 {
+  font-size: 28px;
+  color: #000;
+  font-family: "proxima-nova-alt-condensed", sans-serif; 
+  font-weight: bold;
+}
+.node h2 {
+  font-size: 22px;
+  color: #000;
+  font-family: "proxima-nova-alt-condensed", sans-serif;
+  font-weight: bold;
+}
+hr {
+  border: none;
+  background-color: #ECECEC;
+  height: 2px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.block-title {
+  padding-bottom: 20px;
+}
+
+.node .content {
+  word-wrap: break-word; /* IE 5+ */
+}
+/** end global **/

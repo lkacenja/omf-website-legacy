@@ -1,0 +1,14 @@
+.required {
+  border: 2px solid #C43B28;
+}
+#docs-aria-speakable {
+  display: none;
+}
+.ss-password-warning {
+  display: none;
+}
+.required-message {
+  font-size: 14px;
+  font-style: italic;
+  display: none;
+}

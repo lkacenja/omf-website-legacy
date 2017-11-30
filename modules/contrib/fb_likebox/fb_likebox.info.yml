@@ -1,0 +1,6 @@
+name : Facebook Likebox
+type: module
+description : Simple module that provides a configurable block with Facebook Likebox's plugin.
+package : FB Likebox
+version: VERSION
+core : 8.x
